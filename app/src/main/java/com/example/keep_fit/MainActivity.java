@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.ListC
 
     private List<MainClass> allCourses;
 
-    //public ExpresssoIdlingResource mIdlingResource;
+     public EspressoIdle mIdlingResource;
 
 
     @SuppressLint("NotifyDataSetChanged")
@@ -47,8 +47,8 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.ListC
 
 
         // ------------- FIND VIEW BY ID --------------- //
-       //  getIdlingResource();
-       // mIdlingResource.setIdleState(false);
+        getIdlingResource();
+        mIdlingResource.setIdleState(false);
 
         floatingActionButton = findViewById(R.id.floating_id);
         review_recycler = findViewById(R.id.user_data_recycler);
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.ListC
         Collections.reverse(MainClassList);
         MainAdapter.setList(MainClassList);
         MainAdapter.notifyDataSetChanged();
-      //  mIdlingResource.setIdleState(true);
+        mIdlingResource.setIdleState(true);
 
         review_recycler.setAdapter(MainAdapter);
         MainAdapter.notifyDataSetChanged();
@@ -103,12 +103,12 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.ListC
     }
 
 
-   /* @VisibleForTesting
+    @VisibleForTesting
     @NonNull
     public IdlingResource getIdlingResource() {
         if (mIdlingResource == null) {
-            mIdlingResource = new ExpresssoIdlingResource();
+            mIdlingResource = new EspressoIdle();
         }
         return mIdlingResource;
-    }*/
+    }
 }
