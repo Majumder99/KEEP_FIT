@@ -25,27 +25,27 @@ It is a simple android project. After open the app it will first show you the sp
 ## Splash screen :
 
 <br>
-<img src='images/Splash-screen.png'>
+<img src='images/UI/Splash-screen.png'>
 <br>
 <br>
 
 ## Main Activity :
 
 <br>
-<img src='images/MainActivityRecycler view.png'>
+<img src='images/UI/MainActivityRecycler view.png'>
 <br>
 <br>
 
 ## Insert data :
 
 <br>
-<img src='images/Insert Data.png'>
+<img src='images/UI/Insert Data.png'>
 <br>
 <br>
 
 ## User details :
 
 <br>
-<img src='images/User Details.png'>
+<img src='images/UI/User Details.png'>
 <br>
 <br>
