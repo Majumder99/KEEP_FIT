@@ -258,7 +258,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <EditText
-                    android:id="@+id/heartRate_edit_text"
+                    android:id="@+id/heartRate_2"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_marginStart="34dp"
@@ -333,7 +333,7 @@
 
                 <Button
                     android:id="@+id/update_2"
-                    android:layout_width="100dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="60dp"
                     android:layout_marginStart="24dp"
                     android:backgroundTint="@color/primary"
@@ -344,8 +344,8 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
-                    android:id="@+id/save_2"
-                    android:layout_width="100dp"
+                    android:id="@+id/delete_2"
+                    android:layout_width="wrap_content"
                     android:layout_height="60dp"
                     android:layout_gravity="right"
                     android:layout_marginEnd="24dp"
