@@ -31,6 +31,11 @@ public class InsertData extends AppCompatActivity {
     EditText heartRateEdit;
     EditText commentEdit;
     Button saveBtn;
+
+    /**
+     * Sending data to DB
+     * @param savedInstanceState
+     */
  
     @Override
     protected void onCreate(Bundle savedInstanceState) {

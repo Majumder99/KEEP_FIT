@@ -16,16 +16,26 @@ public class DBRepository {
         allData = dao.getAllData();
     }
 
+    /**
+     * inserting into DB
+     * @param model
+     */
     public void insert(MainClass model) {
         new InsertCourseAsyncTask(dao).execute(model);
     }
 
-    // creating a method to update data in database.
+    /**
+     * updating into DB
+     * @param model
+     */
     public void update(MainClass model) {
         new UpdateCourseAsyncTask(dao).execute(model);
     }
 
-    // creating a method to delete the data in our database.
+    /**
+     * deleting from DB
+     * @param model
+     */
     public void delete(MainClass model) {
         new DeleteCourseAsyncTask(dao).execute(model);
     }

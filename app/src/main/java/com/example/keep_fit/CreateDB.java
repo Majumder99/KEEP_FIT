@@ -11,6 +11,9 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
+/**
+ * Creating room database
+ */
 @Database(entities = {MainClass.class}, version = 1)
 public abstract class CreateDB extends RoomDatabase {
 
@@ -50,7 +53,9 @@ public abstract class CreateDB extends RoomDatabase {
         return instance;
     }
 
-
+    /**
+     * callback function
+     */
     private static Callback roomCallback = new Callback() {
         @Override
         public void onCreate(@NonNull SupportSQLiteDatabase db) {
@@ -60,7 +65,9 @@ public abstract class CreateDB extends RoomDatabase {
         }
     };
 
-    // we are creating an async task class to perform task in background.
+    /**
+     * we are creating an async task class to perform task in background.
+     */
     private static class PopulateDbAsyncTask extends AsyncTask<Void, Void, Void> {
         PopulateDbAsyncTask(CreateDB instance) {
             QueryDB dao = instance.Dao();
