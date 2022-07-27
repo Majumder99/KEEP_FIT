@@ -36,7 +36,11 @@ public class InsertData extends AppCompatActivity {
      * Sending data to DB
      * @param savedInstanceState
      */
- 
+
+    /**
+     * Finding view by id
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +56,9 @@ public class InsertData extends AppCompatActivity {
         dbRepo = new DBRepository(getApplication());
 
 
+        /**
+         * save button action definition
+         */
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,6 +70,10 @@ public class InsertData extends AppCompatActivity {
 
 
                 int systolic = 0, diastolic = 0, heartRate = 0;
+
+                /**
+                 * Adding validator for inputs from user
+                 */
 
                 if (!systolicString.isEmpty()) {
                     systolic = Integer.parseInt(systolicString);

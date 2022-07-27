@@ -23,6 +23,9 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements MainAdapter.ListClickListener{
 
+    /**
+     * Initialising components: data list, data adapter, button, recycler view, text view, database
+     */
     private List<MainClass> MainClassList;
     private MainAdapter MainAdapter;
     private FloatingActionButton floatingActionButton;
@@ -30,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.ListC
     private TextView textView;
 
 
-    private DBRepository repository;    // ------ DB ---------- //
+    private DBRepository repository;
 
 
     private List<MainClass> allCourses;
@@ -46,7 +49,9 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.ListC
         setContentView(R.layout.activity_main);
 
 
-        // ------------- FIND VIEW BY ID --------------- //
+        /**
+         * Finding views by id
+         */
         getIdlingResource();
         mIdlingResource.setIdleState(false);
 
@@ -56,8 +61,9 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.ListC
 
         MainClassList = new ArrayList<>();
 
-        // -- Database -- //
-       // mIdlingResource.setIdleState(false);
+        /**
+         * Database
+         */
         repository = new DBRepository(getApplication());  // ------ DB ---------- //
 
         MainClassList = repository.getAllData();  // ------get Data DB ---------- //
@@ -79,6 +85,9 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.ListC
         review_recycler.setAdapter(MainAdapter);
         MainAdapter.notifyDataSetChanged();
 
+        /**
+         * Floating action button action definition
+         */
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -93,7 +102,10 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.ListC
 
     }
 
-
+    /**
+     * Clickable list in recycler view action definition
+     * @param MainClass
+     */
     @Override
     public void onListClick(MainClass MainClass) {
         Intent intent = new Intent(MainActivity.this, UserDetails.class);
@@ -103,6 +115,11 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.ListC
     }
 
 
+    /**
+     * EspressoIdle for creating delay while running ui testing-- waiting for database to retrieve data
+     * on the page
+     * @return
+     */
     @VisibleForTesting
     @NonNull
     public IdlingResource getIdlingResource() {

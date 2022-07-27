@@ -40,17 +40,24 @@ public class DBRepository {
         new DeleteCourseAsyncTask(dao).execute(model);
     }
 
-    // below is the method to delete all the courses.
+    /**
+     * below is the method to delete all the courses.
+     */
     public void deleteAllData() {
         new DeleteAllCoursesAsyncTask(dao).execute();
     }
 
-    // below method is to read all the courses.
+    /**
+     * below method is to read all the courses.
+     * @return
+     */
     public List<MainClass> getAllData() {
         return allData;
     }
 
-    // we are creating a async task method to insert new course.
+    /**
+     * we are creating a async task method to insert new course.
+     */
     private static class InsertCourseAsyncTask extends AsyncTask<MainClass, Void, Void> {
         private QueryDB dao;
 
@@ -60,13 +67,17 @@ public class DBRepository {
 
         @Override
         protected Void doInBackground(MainClass... model) {
-            // below line is use to insert our modal in dao.
+            /**
+             * below line is use to insert our modal in dao.
+             */
             dao.InsertData(model[0]);
             return null;
         }
     }
 
-    // we are creating a async task method to update our course.
+    /**
+     * we are creating a async task method to update our course.
+     */
     private static class UpdateCourseAsyncTask extends AsyncTask<MainClass, Void, Void> {
         private QueryDB dao;
 
@@ -76,14 +87,18 @@ public class DBRepository {
 
         @Override
         protected Void doInBackground(MainClass... models) {
-            // below line is use to update
-            // our modal in dao.
+            /**
+             * below line is use to update our modal in dao.
+             */
             dao.UpdateData(models[0]);
             return null;
         }
     }
 
-    // we are creating a async task method to delete course.
+
+    /**
+     * we are creating a async task method to delete course.
+     */
     private static class DeleteCourseAsyncTask extends AsyncTask<MainClass, Void, Void> {
         private QueryDB dao;
 
@@ -93,14 +108,17 @@ public class DBRepository {
 
         @Override
         protected Void doInBackground(MainClass... models) {
-            // below line is use to delete 
-            // our course modal in dao.
+            /**
+             * below line is use to delete our course modal in dao.
+             */
             dao.DeleteData(models[0]);
             return null;
         }
     }
 
-    // we are creating a async task method to delete all courses.
+    /**
+     * we are creating a async task method to delete all courses.
+     */
     private static class DeleteAllCoursesAsyncTask extends AsyncTask<Void, Void, Void> {
         private QueryDB dao;
         private DeleteAllCoursesAsyncTask(QueryDB dao) {
@@ -108,9 +126,9 @@ public class DBRepository {
         }
         @Override
         protected Void doInBackground(Void... voids) {
-            // on below line calling method
-            // to delete all courses.
-           // dao.deleteAllCourses();
+            /**
+             * on below line calling method to delete all courses, dao.deleteAllCourses();
+             */
             return null;
         }
     }
