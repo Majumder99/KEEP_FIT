@@ -14,6 +14,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+/**
+ * Adding recycleview and viewholder
+ */
 public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
     public List<MainClass> MainClassList;
     private final Context context;
@@ -30,6 +33,12 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
         notifyDataSetChanged();
     }
 
+    /**
+     * onCreateViewHolder
+     * @param parent
+     * @param viewType
+     * @return
+     */
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -38,6 +47,11 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
     }
 
 
+    /**
+     * onBindViewHolder
+     * @param holder
+     * @param position
+     */
     @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
@@ -69,17 +83,26 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
 
     }
 
+    /**
+     * getItemCount()
+     * @return
+     */
     @Override
     public int getItemCount() {
         if (MainClassList == null) return 0;
         return MainClassList.size();
     }
 
+    /**
+     * ListClickListener
+     */
     public interface ListClickListener {
         void onListClick(MainClass MainClass);
     }
 
-
+    /**
+     * Adding viewholder and recycleview
+     */
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private TextView systolic_text, systolic_value;
         private TextView diastolic_text, diastolic_value;
@@ -110,11 +133,14 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
         }
 
 
+        /**
+         * onClick()
+         * @param v
+         */
         @Override
         public void onClick(View v) {
             int pos = getAdapterPosition();
             mListClickListener.onListClick(MainClassList.get(pos));
-
         }
 
 

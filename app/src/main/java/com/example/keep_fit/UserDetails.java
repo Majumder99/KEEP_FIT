@@ -20,6 +20,9 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
+/**
+ * userdetails class
+ */
 public class UserDetails extends AppCompatActivity {
 
     DBRepository DBRepo;
@@ -44,6 +47,10 @@ public class UserDetails extends AppCompatActivity {
 
     Button SaveBtn;
 
+    /**
+     * showing userdetails
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,7 +73,7 @@ public class UserDetails extends AppCompatActivity {
         mainClass = (MainClass) getIntent().getSerializableExtra("MainClass");
 
 
-        DBRepo = new DBRepository(getApplication()); // -------- DB ----------- //
+        DBRepo = new DBRepository(getApplication());
 
 
 
@@ -83,6 +90,10 @@ public class UserDetails extends AppCompatActivity {
 
 
         deleteBtn.setOnClickListener(new View.OnClickListener() {
+            /**
+             * creating intent to go from userdetails to mainactivity after click save button
+             * @param v
+             */
             @Override
             public void onClick(View v) {
 
@@ -96,6 +107,10 @@ public class UserDetails extends AppCompatActivity {
 
 
         SaveBtn.setOnClickListener(new View.OnClickListener() {
+            /**
+             * form validation
+             * @param v
+             */
             @Override
             public void onClick(View v) {
 

@@ -13,7 +13,9 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-
+/**
+ * declare
+ */
 @RunWith(AndroidJUnit4.class)
 public class UnitTesting {
     private CreateDB db;
@@ -31,6 +33,10 @@ public class UnitTesting {
 
     }
 
+    /**
+     * loaddata
+     * @throws Exception
+     */
     @Test
     public void LoadData() throws Exception{
 
@@ -64,6 +70,10 @@ public class UnitTesting {
     }
 
 
+    /**
+     * testing to insert data
+     * @throws Exception
+     */
     @Test
     public void InsertData() throws Exception{
 
@@ -81,7 +91,10 @@ public class UnitTesting {
     }
 
 
-
+    /**
+     * testing to delete data
+     * @throws Exception
+     */
     @Test
     public void DeleteData() throws Exception{
 
@@ -98,6 +111,11 @@ public class UnitTesting {
         assertNull(MainClassNUll);
 
     }
+
+    /**
+     * testing to update data
+     * @throws Exception
+     */
     @Test
     public void UpdateData() throws Exception{
 
@@ -123,7 +141,9 @@ public class UnitTesting {
     }
 
 
-
+    /**
+     * close the database
+     */
     @After
     public void finish() {
         db.close();
