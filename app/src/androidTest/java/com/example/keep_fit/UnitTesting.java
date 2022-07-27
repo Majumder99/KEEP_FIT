@@ -13,15 +13,19 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-/**
- * declare
- */
 @RunWith(AndroidJUnit4.class)
 public class UnitTesting {
+
+    /**
+     * declare database and query
+     */
     private CreateDB db;
     private QueryDB dao;
- 
 
+
+    /**
+     * initialize database and dao(query class)
+     */
     @Before
     public void before() {
 
@@ -34,7 +38,7 @@ public class UnitTesting {
     }
 
     /**
-     * loaddata
+     * inserting data in the main class
      * @throws Exception
      */
     @Test
