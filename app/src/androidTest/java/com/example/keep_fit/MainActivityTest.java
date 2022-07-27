@@ -27,6 +27,9 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+/**
+ * declare
+ */
 @RunWith(AndroidJUnit4.class)
 @LargeTest
 public class MainActivityTest {
@@ -60,10 +63,9 @@ public class MainActivityTest {
     /**
      * Main activity app name test
      */
-
     @Test
     public void testAppName() {
-        onView(withText("Keep Fit")).check(matches(isDisplayed())); //Check the name on the screen
+        onView(withText("Keep Fit")).check(matches(isDisplayed()));
     }
 
     /**
@@ -75,6 +77,10 @@ public class MainActivityTest {
         onView(allOf(withId(R.id.insetDataText), withText("Enter your Data")));
     }
 
+
+    /**
+     * testing update()
+     */
     @Test
     public void UpdateTest() {
         onView(withText("Keep Fit")).check(matches(isDisplayed())); //Check the name on the screen
@@ -100,8 +106,6 @@ public class MainActivityTest {
 
         onView(withText("Keep Fit")).check(matches(isDisplayed()));
 
-
-        // -- TO Detail Activity // checking -- //
 
 
         onView(withId(R.id.user_data_recycler)).perform(actionOnItemAtPosition(0, click()));
@@ -158,6 +162,9 @@ public class MainActivityTest {
     }
 
 
+    /**
+     * testing delete
+     */
     @Test
     public void DeleteTest() {
 
@@ -173,6 +180,9 @@ public class MainActivityTest {
     }
 
 
+    /**
+     * espressoidle for delay
+     */
     @After
     public void unregisterIdlingResource() {
         if (mIdlingResource != null) {

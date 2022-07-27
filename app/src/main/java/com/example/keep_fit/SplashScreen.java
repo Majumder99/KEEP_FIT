@@ -6,8 +6,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+/**
+ * adding splashscreen
+ */
 public class SplashScreen extends AppCompatActivity {
 
+    /**
+     * onCreate function
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,6 +22,9 @@ public class SplashScreen extends AppCompatActivity {
 
 
         Runnable runnable = new Runnable() {
+            /**
+             * run()
+             */
             @Override
             public void run() {
                 Intent intent = new Intent(SplashScreen.this, MainActivity.class);
