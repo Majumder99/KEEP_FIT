@@ -18,6 +18,10 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
+/**
+ * Floating Button
+ * Showing the form fields to add data to database
+ */
 public class InsertData extends AppCompatActivity {
 
 

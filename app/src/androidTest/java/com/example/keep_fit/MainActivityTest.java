@@ -28,7 +28,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 /**
- * declare
+ * Creating UI test
  */
 @RunWith(AndroidJUnit4.class)
 @LargeTest

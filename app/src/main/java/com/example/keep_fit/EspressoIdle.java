@@ -5,6 +5,9 @@ import androidx.test.espresso.IdlingResource;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
+/**
+ * For creating delay before fetching data from database
+ */
 public class EspressoIdle implements IdlingResource {
 
     @Nullable

@@ -13,6 +13,9 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+/**
+ * Starting unit testing
+ */
 @RunWith(AndroidJUnit4.class)
 public class UnitTesting {
 
