@@ -5,6 +5,11 @@ import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
 
+/**
+ * Model class for database
+ * Getter and setter functions
+ */
+
 @Entity(tableName = "Main_Table")
 public class MainClass implements Serializable {
     public MainClass() {

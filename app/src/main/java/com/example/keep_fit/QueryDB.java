@@ -9,6 +9,9 @@ import androidx.room.Update;
 
 import java.util.List;
 
+/**
+ * Writing all the queries for the database
+ */
 @androidx.room.Dao
 public interface QueryDB {
 

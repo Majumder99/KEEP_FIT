@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/3.1/CSE 3120/Keep_fit/KEEP_FIT/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/3.1/CSE 3120/Keep_fit/KEEP_FIT/app/src/main/res/layout/list_item.xml" value="0.25416666666666665" />
         <entry key="..\:/3.1/CSE 3120/new/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.2265" />
         <entry key="..\:/3.1/CSE 3120/new/app/src/main/res/drawable/ic_baseline_error_24.xml" value="0.2265" />
         <entry key="..\:/3.1/CSE 3120/new/app/src/main/res/drawable/ic_baseline_medical_services_24.xml" value="0.2265" />
@@ -19,6 +21,7 @@
     <option name="OPTION_DOCUMENT_TAG_USE" value="true" />
     <option name="OPTION_DOCUMENT_TAG_AUTHOR" value="true" />
     <option name="OPTION_DOCUMENT_TAG_VERSION" value="true" />
+    <option name="OTHER_OPTIONS" value="-encoding UTF-8 -charset UTF-8 -docencoding UTF-8 -sourcepath D:/android.jar" />
     <option name="LOCALE" value="en" />
     <option name="OPTION_INCLUDE_LIBS" value="true" />
   </component>

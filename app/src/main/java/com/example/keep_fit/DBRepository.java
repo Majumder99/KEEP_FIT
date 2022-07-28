@@ -1,10 +1,14 @@
 package com.example.keep_fit;
 
+
 import android.app.Application;
 import android.os.AsyncTask;
 
 import java.util.List;
 
+/**
+ * For inserting, deleting and updating data into the database
+ */
 public class DBRepository {
 
     private QueryDB dao;

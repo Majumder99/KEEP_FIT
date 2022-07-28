@@ -21,6 +21,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Recycler view
+ */
 public class MainActivity extends AppCompatActivity implements MainAdapter.ListClickListener{
 
     /**
